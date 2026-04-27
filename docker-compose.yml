@@ -1,0 +1,13 @@
+services:
+  key-generation-service:
+    build: key-generation-service
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ./key-generation-service:/app
+
+    # Set environment variables
+    environment:
+      - FLASK_DEBUG=1
